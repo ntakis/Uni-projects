@@ -1,0 +1,486 @@
+/* General styling for form elements */
+input, textarea, select, button {
+  border: 1px solid #3498db; /* Blue border color */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Styling for the form container */
+fieldset {
+  border: 2px solid #3498db; /* Blue border color */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ecf0f1; /* Light gray background */
+  color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto; /* Center the form */
+}
+.reg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Style for the legend (form title) */
+legend {
+  font-weight: bold;
+  color: #3498db; /* Same blue color as the border */
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Validation error styling */
+input:invalid, textarea:invalid, select:invalid {
+  border: 1px solid #e74c3c; /* Red border for invalid fields */
+}
+
+
+/* Style for the submit button */
+button {
+  background-color: #3498db; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect for the submit button */
+button:hover {
+  background-color: #2980b9; /* Slightly darker blue on hover */
+}
+
+
+
+.photo {
+  max-width: 600px; /* Set the desired width for the images */
+  max-height: 400px; /* Set the desired height for the images */
+  object-fit:scale-down; /* Optional: scale and crop the images to fit the dimensions */
+  width:50%;
+}
+
+
+
+  h1 {
+    font-size: 36px; /* Adjust the font size to your preference */
+    font-family: "GFS"; /* Choose a stylish font */
+    color: #0078d4; /* Set a vibrant text color */
+    text-transform: uppercase; /* Transform the text to uppercase */
+    letter-spacing: 2px; /* Add some letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    background: linear-gradient(to right,  #e96c14, #c6d709); /* Apply a gradient background */
+    background-clip:padding-box;
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text transparent */
+    padding: 10px 0; /* Add some padding above and below the text */
+   }  
+  main h2 {
+    background-color: rgb(161, 183, 248); /* Background color */
+    font-size: 20px;
+    color: #fff; /* Text color */
+    padding: 5px ; /* Padding to increase clickable area */
+    border: none; /* Remove the default border */
+    text-align: left; /* Center the text horizontally */
+    text-decoration: none; /* Remove underline for links (if it's used as a link) */
+    display: inline-block; /* Keep the button inline with other content */
+    
+}
+
+h2:hover {
+    background-color: #b4aaaf; /* Change the background color on hover */
+}
+.clickable-image {
+    cursor: pointer;
+  }
+
+q {
+  font-family: "GFS_BOLD";
+  text-align: justify;
+
+}  
+
+  
+
+  
+  #globalnav {
+    display: flex;
+    background-color: #050065;
+    align-items: center;
+    font-size: 20px;
+    font-family: "GFS_Bold";
+    
+  }
+
+  #globalnav img {
+      max-width:100px;
+      max-height:100px;
+      height:auto;
+      width:50%;
+      
+  }
+  
+  /* Style the navigation bar links */
+  #globalnav a {
+    color: white;
+    padding:50px 50px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Change color on hover */
+   #globalnav a:hover {
+    background-color: #0078d4;
+    color: black;
+
+  }
+
+
+#globalnav ul {
+    padding: 5px; /* Add padding to the entire navigation */
+    border: 1px solid #fffcfc; /* Add a border */
+    background-color: #050065; /* Change the background color to your preferred color */
+  }
+  #globalnav ul li:not(:last-child)::after {
+    content: ""; /* Add a vertical bar as content */
+    margin-left: 20px; /* Adjust spacing between the bars */
+    color: #050065; /* Bar color */
+  }
+  
+  #globalnav ul li {
+    display: inline;
+    margin: 20px;
+    position:relative;
+    vertical-align:middle;
+  
+
+  }
+ 
+  
+  .floating-photo {
+    position:relative ;
+    top: 0;
+    left: 50%; /* Center the photo horizontally */
+    transform: translateX(-50%); /* Center the photo horizontally */
+    z-index: 1; /* Ensure the photo is above other content */
+    width: 400px; /* Set the width of the photo */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #fff; /* Add a border to the photo (optional) */
+  }
+
+ 
+  body::after {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust the color and opacity  */
+    z-index: -1;  
+  }   
+
+  body{
+    background-image:url('../icons/bluewall.jpg');
+    background-size: cover;
+    color:black;
+    /* Εικόνα background της ιστοσελίδας */
+
+    font-family: "GFS";
+    font-size:20px;
+    font-weight:normal;
+    /* Μέγεθος και font γραμματοσειράς */
+    
+    line-height: 1.4em
+    /* κενό που υπάρχει από γραμμή σε γραμμή κειμένου */
+}
+
+
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+  }
+
+  .main-table {
+    border-collapse: collapse;
+    margin: 5px;
+    font-size: 1em;
+    min-width: 40%;
+    border-radius: 5px 5px 0 0;
+    overflow:hidden; /* προσδιορίζει τι γίνεται εάν το αντικείμενο "ξεχειλίσει". */
+    box-shadow: 0 0 20px rgba(8, 65, 210, 0.977);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-table tbody tr {
+    border-bottom: 1px solid #dddddd; 
+  }
+
+  .main-table tbody tr {
+    text-align: center;
+  }
+
+  .main-table-pic {
+    max-width:50px;
+    max-height:50px;
+    width:100%;
+    height:auto;
+
+  }
+
+
+#upper-footer table tr td {
+  
+  padding:10px;
+ 
+
+}
+
+
+
+.footer-icon {
+  width:50px;
+  height:50px;
+}
+
+footer h2 {
+  background-color: rgb(0, 0, 27); /* Background color */
+  font-size: 15px;
+  color: #fff; /* Text color */
+  padding: 5px ; /* Padding to increase clickable area */
+  border: none; /* Remove the default border */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underline for links (if it's used as a link) */
+   /* Keep the button inline with other content */
+  
+
+
+}
+
+@font-face {
+  font-family: "GFS";
+  src: url(../Assets/GFSNeohellenic-Regular.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "GFS_BOLD";
+  src: url(../Assets/GFSNeohellenic-Bold.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  display: grid;
+}
+
+.creator {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.creator-info {
+  flex: 1;
+}
+
+.creator-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.creator-bio {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.creator-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.creator-photo img {
+   width:100px;
+   height:100px;
+   border-radius: 70%;
+}
+
+fieldset {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  box-shadow: 3px 3px 5px 0 rgba(0, 123, 223, 0.5);
+  width: 900px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  vertical-align: middle;
+}
+
+textarea {
+  vertical-align: middle;
+}
+
+
+form {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:70%;
+  
+}
+
+#page{
+  width: 80%;
+  margin: 0 auto; 
+  position: relative;
+  overflow:hidden;
+ 
+}
+
+.box {
+  background-color: #fff;
+  border: #000000 solid;
+  border-width: 5px;
+  padding: 0px;
+  box-shadow: 0 0 50px rgb(0, 23, 48);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows:max-content;
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  background-color: #050065;
+  
+}
+
+main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 17;
+}
+
+
+footer{
+  grid-column-start: 1;
+  grid-column-end:4;
+  grid-row-start: 17;
+  grid-row-end: 19;
+  background-color: #050065;
+  padding: 5px;
+  text-align: left;
+  font-size: 10px;
+  font-family: "GFS";
+}
+ 
+/* Adjust the styles for grid layout in main */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Add some gap between the columns */
+}
+
+/* Adjust the styles for the info boxes */
+.section {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 20, 72, 0.977);
+}
+
+.section h2 {
+  background-color: rgb(0, 12, 67);
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.info-box ul li {
+  position: relative;
+  left: 0;
+  color: #0040ff;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 2px solid #0003b9;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.info-box ul li:hover {
+  left: 10px;
+}
+.info-box ul li span {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s;
+}
+.info-box ul li:hover span {
+  color: #f7f7f7;
+}
+.info-box ul li:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #003df5;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+}
+.info-box ul li:hover:before {
+  transform: scaleX(1);
+}
+
+.photo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo2 img {
+  max-width: 80%; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  align-self:center;
+}
+
+
