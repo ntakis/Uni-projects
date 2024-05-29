@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles1.css">
+  <title>User Registration</title>
+</head>
+<body>
+    <div id="page">
+        <div class="box">
+          <header>
+            <img src="../icons/vh2.png" alt="The Vehicle Hub" width=100%; height="auto"  onclick="location.href='index.html'" >
+            <nav id="globalnav">
+              <img  src="../icons/Vh.png"  onclick="location.href='index.html'" type="button" alt="Αρχική Σελίδα" >
+              <a href="categories.html">Kατηγορίες </a>
+              <a href="about.html">Ποίοι είμαστε</a>
+              <a href="contact.html">Επικοινωνία</a>
+              <a href="#">Πρόσθετες Πληροφορίες</a>
+          </nav>
+        </header>
+    
+ <main>
+  <div class="reg-container">
+    <form id="registrationForm" autocomplete="on" return registerUser() >
+      <h2>User Registration</h2>
+
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="Name" required >
+        <br></br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Please use a valid e-mail!">
+        <br></br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea>
+
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <br></br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+      </fieldset>
+
+      <!-- User Identification -->
+      <fieldset>
+        <legend>User Identification</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).*" title="Password must contain at least one lowercase letter, one uppercase letter, and one symbol">
+  
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).*" title="Password must contain at least one lowercase letter, one uppercase letter, and one symbol" oninput="checkPasswordMatch()">
+        <div id="passwordMatchError" style="color: red;"></div>
+      </fieldset>
+
+      <!-- Communication Preferences -->
+      <fieldset>
+        <legend>Communication Preferences</legend>
+        <label>Receive updates via:</label>
+        <input type="checkbox" id="receiveSms" name="receiveSms"> SMS
+        <input type="checkbox" id="receiveEmail" name="receiveEmail"> Email
+        <input type="checkbox" id="receiveViber" name="receiveViber"> Viber
+        <input type="checkbox" id="receiveWhatsapp" name="receiveWhatsapp"> WhatsApp
+      </fieldset>
+
+      <!-- User Profile Questionnaire -->
+      <fieldset>
+        <legend>User Profile Questionnaire</legend>
+        <label for="adPreference">Car Preferences:</label>
+        <select id="adPreference" name="adPreference">
+          <option value="electronics">SUV</option>
+          <option value="clothing">Compact car</option>
+          <option value="jobs">Sport cars</option>
+          <option value="Cabriolet"> Cabriolet </option>
+        </select>
+
+        <label for="additionalInfo">Your current vehicle:</label>
+        <textarea id="additionalInfo" name="additionalInfo"></textarea>
+        <button type="submit">Register </button>
+        
+      </fieldset>
+
+      
+     
+      
+  </div>
+  <footer>
+    <div id="upper-footer">
+      <table>
+        <tr>
+        <div id="footer-icons">
+        <td><input type="image" src="../icons/home.png" width=50px; height=50px; onclick="location.href='index.html'" type="button"> </td>
+        <td><input type="image" src="../icons/information-button.png" width=50px; height=50px; onclick="location.href='about.html'" type="button"> </td>
+        <td><input type="image" src="../icons/communicate.png" width=50px; height=50px; onclick="location.href='contact.html'" type="button"> </td>
+        </div>
+        </tr>
+      </table>  
+    </div>    
+   <div class="Copyright">
+     <h2>&copy; 2023-2024 | ΚΩΝΣΤΑΝΤΑΚΗΣ ΑΝΤΩΝΙΟΣ | ΜΑΚΡΗΣ ΧΡΗΣΤΟΣ </h2>
+   </div>  
+</footer> 
+  <script src="reg.js"></script>
+</body>
+</html>

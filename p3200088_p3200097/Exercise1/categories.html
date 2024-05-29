@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <title>VehicleHub Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="../icons/car.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script type="text/javascript" src="try.js"></script>
+
+    <script id="categories-template" type="text/x-handlebars-template">
+        {{#each categories}}
+        <li>{{title}}<br>
+            <img src="{{img_url}}" width="200" height="200" alt="{{title}} Category">
+            <ul>
+                {{#each subcategories}}
+                <li><a href="{{url}}">{{title}}</a></li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </script>
+
+</head>
+
+<body>
+    <div id="page">
+        <div class="box">
+            <header>
+                <!-- ... Your existing header content ... -->
+            </header>
+
+            <main>
+                <ul id="catList"></ul>
+            </main>
+
+            <footer>
+                <!-- ... Your existing footer content ... -->
+            </footer>
+        </div>
+        <button id="createTableBtn1" type="button" class="custom-button button-green">Create Table</button>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', init);
+
+        function init() {
+            document.getElementById("createTableBtn1").focus();
+            document.getElementById("createTableBtn1").onclick = createTableHandlebars;
+
+            let categoriesTemplateScript = document.getElementById('categories-template').innerHTML;
+            window.templates = {}
+            window.templates.categories = Handlebars.compile(categoriesTemplateScript);
+
+            // Fetch categories and subcategories data
+            fetchCategoriesData();
+        }
+
+        function fetchCategoriesData() {
+            fetch('https://wiki-ads.onrender.com/categories')
+                .then(res => res.json())
+                .then(categoriesData => {
+                    const catList = document.getElementById('catList');
+                    renderCategories(categoriesData, catList);
+                })
+                .catch(error => console.log('ERROR fetching categories'));
+        }
+
+        function fetchSubcategoriesData(categoryId, callback) {
+            fetch(`https://wiki-ads.onrender.com/categories/${categoryId}/subcategories`)
+                .then(res => res.json())
+                .then(subcategoriesData => {
+                    callback(subcategoriesData);
+                })
+                .catch(error => console.log('ERROR fetching subcategories'));
+        }
+
+        function renderCategories(categoriesData, catList) {
+            categoriesData.forEach(category => {
+                const li = document.createElement('li');
+
+                fetchSubcategoriesData(category.id, subcategories => {
+                    const imageUrl = `https://wiki-ads.onrender.com/${category.img.url}`;
+                    const html = templates.categories({ categories: [{ title: category.title, img_url: imageUrl, subcategories }] });
+                    li.innerHTML = html;
+                    catList.appendChild(li);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
+
