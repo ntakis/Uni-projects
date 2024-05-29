@@ -1,0 +1,31 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(496,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  gamestate.cpp
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(28,53): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(28,48): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(31,19): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\util.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  level.cpp
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(28,53): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(28,48): warning C4244: 'argument': conversion from 'float' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\platforms.h(31,19): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\util.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  player.cpp
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\util.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  Stage1.vcxproj -> D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\bin\Stage1.exe

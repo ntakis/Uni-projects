@@ -1,0 +1,2 @@
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\VISUAL STUDIO PROJECTS\Stage1\x64\Debug\Stage1.exe
+D:\ΣΧΟΛΗ\3ο ΕΞΑΜΗΝΟ\C++\ΕΡΓΑΣΙΑ ΣΟΥΠΕΡ ΜΑΡΙΟ\Stage1\x64\Debug\Stage1.exe
