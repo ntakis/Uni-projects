@@ -1,0 +1,44 @@
+MASTER:
+Just run main method.
+Master System requires all files except from DummyUser.java, Worker.java, StatPrinter.java and MappingThread.java
+
+WORKER:
+args[0] = IP_ADDRESS
+Worker System requires Worker.java, GPXPacket.java, GPXPoint.java and MappingThread.java files.
+
+(DUMMY) USER:
+args[0] = route file number e.x. for args[0] = 1, if "route1" file is located at System.getProperty("user.dir")
+it sends it.
+args[1] = IP_ADDRESS
+(Dummy) User system requires DummyUser.java and StatPrinter.java files.
+
+ASSUMPTIONS:
+- Each user can only send one file at a time, meaning that in order for the same user to send a second gpx file
+for processing he has to wait until he receives the results from the first one.
+
+ABOUT THE GLOBAL USER ACTIVITY STATS:
+There is an attempt to update the global user stats every x seconds (currently set at 5 seconds) by the global
+activity stats updater. The user won't receive a real-time updated global_stats file but will receive a file that
+was updated x seconds before which means the global_stats file won't factor in his last request's results.
+
+Also, if the Master system stops operating immediately after results have been sent to a user, then the global
+activity stats updater won't have enough time to update the global_stats file and the global_stats file will contain
+innacurate data. An assumption is made that the Main.java method will keep running after a request has been completed
+for at least another 5 seconds.
+
+ABOUT CHUNK_SIZE:
+We made the choice of size 10 gpx chunks, this can easily be changed from the ResultReducer CHUNK_SIZE variable.
+
+ABOUT SENDING GPX CHUNKS FROM DIFFERENT GPX FILES AT THE SAME TIME:
+There can be up to 5 active threads sending gpx chunks from a different gpx file, this option can be changed
+by adjusting the variable SENDER_LIMIT of the TaskAssigner class.
+
+ABOUT THE RESULTS THE USER RECEIVES:
+In the user system 3 different temporary files* are stored, their contents are printed in a human friendly way
+using the StatPrinter class and then they are deleted. If they need be stored inside the user's system then 
+that can easily be changed. Για τη διευκόλυνση του εξεταστή επιλέξαμε τη μέθοδο αυτή προς το παρών.
+
+* temporary file names: username_temp_user_route_stats, username_temp_total_route_stats, username_temp_global_stats
+
+ADDITIONAL NOTE: The gpx files the master receives are also deleted after being parsed, this can also easily change
+if need be.
