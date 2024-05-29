@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <title>Category Page</title>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/category.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div id="page">
+      <div class="box">
+        <header>
+          <img
+            src="../icons/vh2.png"
+            alt="The Vehicle Hub"
+            width="100%;"
+            height="auto"
+            onclick="location.href='index.html'"
+          />
+          <div id="login-form">
+            <form id="loginForm">
+              <label for="username">Όνομα Χρήστη:</label>
+              <input type="text" id="username" name="username" required />
+              <br />
+
+              <label for="password">Κωδικός Πρόσβασης:</label>
+              <input type="password" id="password" name="password" required />
+              <br />
+
+              <button type="button" onclick="login()">Σύνδεση</button>
+            </form>
+            <div id="login-message" style="color: aliceblue"></div>
+          </div>
+        </header>
+
+        <main>
+          <h2 id="favoriteAdsLinkContainer"></h2>
+          <div class="textcontainer">
+            <h1>CATEGORIES PAGE</h1>
+
+            <div id="ads-container"></div>
+          </div>
+        </main>
+
+        <footer>
+          <div class="Copyright">
+            <h2>&copy; 2023-2024 | ΚΩΝΣΤΑΝΤΑΚΗΣ ΑΝΤΩΝΙΟΣ | ΜΑΚΡΗΣ ΧΡΗΣΤΟΣ</h2>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

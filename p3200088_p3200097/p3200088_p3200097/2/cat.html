@@ -1,0 +1,82 @@
+<!-- categories.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VehicleHub Categories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="../icons/car.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+
+<body>
+    <div id="page">
+        <div class="box">
+          <header>
+            <img src="../icons/vh2.png" alt="The Vehicle Hub" width="100%" height="auto"  onclick="location.href='index.html'" >
+            <nav id="globalnav">
+              <img  src="../icons/Vh.png"  onclick="location.href='index.html'" type="button" alt="Αρχική Σελίδα" >
+              <a href="categories.html">Kατηγορίες </a>
+              <a href="about.html">Ποίοι είμαστε</a>
+              <a href="contact.html">Επικοινωνία</a>
+              <a href="#">Πρόσθετες Πληροφορίες</a>
+           </nav>
+         </header>
+        
+
+    <main class="grid-container">
+      <!-- Modify the following block based on your data -->
+      {{#each categoriesData}}
+      <div class="section">
+        <h2>{{title}}</h2>
+        <div class="photo2">
+          <img src="{{image}}" alt="{{title}}">
+        </div>
+        <div class="info-box">
+          <ul>
+            {{#each subcategories}}
+              <li><span><a href="category.html?category={{this}}">{{this}}</a></span></li>
+            {{/each}}
+          </ul>
+        </div>  
+     </div>
+     {{/each}}
+      <!-- End of modified block -->
+    </main>
+
+    <footer>
+      <div id="upper-footer">
+        <table>
+          <tr>
+            <div>
+			    <td><input type="image" src="../icons/home.png"  onclick="location.href='index.html'" type="button" class="footer-icon"> </td>
+			    <td><input type="image" src="../icons/information-button.png" onclick="location.href='about.html'" type="button" class="footer-icon"> </td>
+			    <td><input type="image" src="../icons/communicate.png" onclick="location.href='contact.html'" type="button" class="footer-icon"> </td>
+            </div>
+          </tr>
+        </table>  
+      </div>    
+     <div class="Copyright">
+       <h2>&copy; 2023-2024 | ΚΩΝΣΤΑΝΤΑΚΗΣ ΑΝΤΩΝΙΟΣ | ΜΑΚΡΗΣ ΧΡΗΣΤΟΣ </h2>
+     </div>  
+	</footer> 
+    </div>
+</div>
+<!-- Add this script at the end of your categories.html body -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the category ID from the query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryId = urlParams.get("category");
+  
+      // Check if a category ID is present
+      if (categoryId) {
+        // You can use categoryId to dynamically highlight or load specific content for the selected category
+        console.log("Selected category:", categoryId);
+      }
+    });
+  </script>
+  
+</body>
+</html>
